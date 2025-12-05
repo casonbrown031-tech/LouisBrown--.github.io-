@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Like New Carpet Crew</title>
+
+  <style>
+    /* Global Styles */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f0f0;
+      color: #003366;
+    }
+
+    header {
+      background: linear-gradient(90deg, #003366, #0055aa);
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #ffffff;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+      border-bottom: 2px solid #cccccc;
+    }
+
+    nav a {
+      color: #003366;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #0055aa;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      background: linear-gradient(180deg, #e6e6e6, #f5f5f5);
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .hero-image-wrapper {
+      max-width: 550px;
+      margin: 0 auto 35px auto;
+      padding: 18px;
+      background: white;
+      border-radius: 2px;
+      border: 3px solid #dce6f5;
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .hero-image-wrapper:hover {
+      transform: scale(1.02);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+    }
+
+    .hero img {
+      width: 50%;
+      height: auto;
+      border-radius: 2px;
+    }
+
+    .hero h1 {
+      font-size: 3em;
+      color: #003366;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      color: #333333;
+      margin-bottom: 20px;
+    }
+
+    .cta-button {
+      background-color: #0066cc;
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1em;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .cta-button:hover {
+      background-color: #004c99;
+    }
+
+    /* SERVICES */
+    .services {
+      display: flex;
+      justify-content: space-around;
+      padding: 40px 20px;
+      background-color: #ffffff;
+      flex-wrap: wrap;
+    }
+
+    .service-card {
+      background-color: #f9f9f9;
+      border: 1px solid #cccccc;
+      border-radius: 8px;
+      padding: 20px;
+      width: 30%;
+      min-width: 250px;
+      text-align: center;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+
+    .service-card h3 {
+      color: #003366;
+    }
+
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Like New Carpet Crew</h1>
+    <p>Grey, Blue & White Professional Carpet Services</p>
+  </header>
+
+  <nav>
+    <a href="Structure.html">Services</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-image-wrapper">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-ECggEYTFFFaV-3Gxxi_xDc1k0ybaXwmE3w&s"
+           alt="Like New Carpet Crew Advertisement">
+    </div>
+
+    <h1>Fresh Floors, Fresh Start</h1>
+    <p>We bring professionalism and care to every carpet we clean or install.</p>
+    <button class="cta-button">Specials</button>
+  </section>
+
+  <!-- SERVICES SECTION -->
+  <section id="services" class="services">
+
+    <div class="service-card">
+      <h3>Carpet Cleaning</h3>
+      <p>Deep cleaning with eco-friendly products to restore your carpets.</p>
+    </div>
+
+    <div class="service-card">
+      <h3>Carpet Installation</h3>
+      <p>Expert installation with precision and quality materials.</p>
+    </div>
+
+    <div class="service-card">
+      <h3>Maintenance Plans</h3>
+      <p>Keep your carpets looking new with scheduled maintenance.</p>
+    </div>
+
+    <!-- ✅ FIBER PROTECTION -->
+    <div class="service-card">
+      <h3>Fiber Protection Treatment</h3>
+
+      <button class="cta-button" onclick="toggleFiber()">
+        Learn More
+      </button>
+
+      <p id="fiber-text" style="display:none; margin-top:15px; font-size:1.1em; color:#003366;">
+        Adds a protective barrier to help carpets resist future stains, salt, and moisture.
+      </p>
+    </div>
+
+    <!-- ✅ WINTERIZING CITRUS -->
+    <div class="service-card">
+      <h3>Winterizing Your Citrus</h3>
+
+      <button class="cta-button" onclick="toggleCitrus()">
+        How to Prepare
+      </button>
+
+      <p id="citrus-text" style="display:none; margin-top:15px; font-size:1.1em; color:#003366;">
+        Protect your citrus trees this winter with proper insulation, watering routines, and freeze‑prevention techniques to keep them healthy until spring.
+      </p>
+    </div>
+
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Like New Carpet Crew | Grey, Blue & White Excellence</p>
+  </footer>
+
+  <!-- ✅ JAVASCRIPT FOR BUTTONS -->
+  <script>
+    function toggleFiber() {
+      const text = document.getElementById("fiber-text");
+      text.style.display = text.style.display === "none" ? "block" : "none";
+    }
+
+    function toggleCitrus() {
+      const text = document.getElementById("citrus-text");
+      text.style.display = text.style.display === "none" ? "block" : "none";
+    }
+  </script>
+
+</body>
+</html>
